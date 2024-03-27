@@ -45,7 +45,7 @@
         </div>
         <div class="form-group form-check">
             <input 
-                type="check-box"
+                type="checkbox"
                 name="favorite"
                 class="form-check-input"
                 v-model="contactLocal.favorite"

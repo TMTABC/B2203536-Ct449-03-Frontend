@@ -15,13 +15,13 @@
             />
             <p v-else>Không có liên hệ nào</p>
             <div class="mt-3 row justify-content-around align-item-center">
-                <button class="btn btn-sm btn-primary" @cick="refreshList()">
+                <button class="btn btn-sm btn-primary" @click="refreshList()">
                     <i class="fa-brands fa-firefox"></i>Làm mới
                 </button>
-                <button class="btn btn-sm btn-success" @cick="goToAddContact">
+                <button class="btn btn-sm btn-success" @click="goToAddContact">
                     <i class="fa-regular fa-square-plus"></i> Thêm mới
                 </button>
-                <button class="btn btn-sm btn-danger" @cick="removeAllContact">
+                <button class="btn btn-sm btn-danger" @click="removeAllContact">
                     <i class="fa-solid fa-trash-can"></i> Xóa tất cả
                 </button>
             </div>
