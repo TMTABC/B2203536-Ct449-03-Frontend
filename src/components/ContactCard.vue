@@ -12,7 +12,7 @@ export default {
     </div>
     <div class="p-1">
         <strong>Email:</strong>
-        {{ contact.mail }}
+        {{ contact.email }}
     </div>
     <div class="p-1">
         <strong>Địa chỉ:</strong>

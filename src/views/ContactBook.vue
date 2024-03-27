@@ -32,6 +32,17 @@
                     <i class="fas fa-address-card"></i>
                 </h4>
                 <ContactCard :contact="activeContact"/>
+                <router-link
+                    :to="{
+                        name:'contact.edit',
+                        params:{ id:activeContact._id },
+                    }"
+                >
+                    <span class="mt-2 badge badge-warning">
+                        <i class="fas fas-edit"></i>
+                        Hiệu chỉnh
+                    </span>
+                </router-link>
             </div>
         </div>
     </div>
@@ -75,6 +86,7 @@ export default {
         // Tra ve contact chua thong tin can tim
         filteredContacts(){
             if(!this.searchText)return this.contacts;
+            console.log(this.contacts)
             return this.contacts.filter((_contact,index)=>
                 this.contactStrings[index].includes(this.searchText)
             )
@@ -91,6 +103,7 @@ export default {
         async retrieveContacts(){
             try{
                 this.contacts = await ContactService.getAll();
+                
             }catch(e){
                 console.log(e)
             }
